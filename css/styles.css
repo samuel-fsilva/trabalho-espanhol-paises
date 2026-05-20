@@ -10,6 +10,7 @@ body {
   font-family: "Outfit", sans-serif;
   background-attachment: fixed;
   overflow-x: hidden;
+  transition: 250ms;
 }
 .to-centralize {
   justify-content: center;
@@ -42,30 +43,30 @@ nav #items {
   text-shadow: 4px 4px 11px #000000;
   text-align: center;
 }
-#toggle-buttons{
+#toggle-buttons {
   justify-self: flex-end;
   align-self: center;
   position: relative;
-  right: 50px;
+  right: 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   width: 120px;
   height: 75%;
   gap: 20px;
 }
-#toggle-buttons button{
+#toggle-buttons button {
   aspect-ratio: 1 / 1;
   border-radius: 50%;
-  border: none ;
+  border: none;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
-#toggle-peru{
-  background:  url(../images/peru/bandeira.png);
+#toggle-peru {
+  background: url(../images/peru/bandeira.png);
 }
-#toggle-bolivia{
-  background:  url(../images/bolivia/bandeira.png);
+#toggle-bolivia {
+  background: url(../images/bolivia/bandeira.png);
 }
 header {
   display: grid;
@@ -91,4 +92,15 @@ main {
 }
 p {
   text-indent: 60px;
+}
+button {
+  transition: 250ms;
+}
+button:hover {
+  scale: 0.9;
+  filter: brightness(0.9);
+  cursor: pointer;
+}
+#menu-button {
+  display: none;
 }

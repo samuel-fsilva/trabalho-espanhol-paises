@@ -86,14 +86,11 @@ function upperCaseFirst(text) {
   return text[0].toUpperCase() + text.slice(1);
 }
 window.addEventListener("scroll", (event) => {
-  //console.log('User is scrolling!');
-  //console.log('Vertical position:', window.scrollY);
   navColor();
 });
 
 
 toggleButtons.forEach((button) => {
-  console.log(button)
   button.addEventListener("click", (e) => {
     main.innerHTML = ""
     setElements(siteContent, e.target.value);

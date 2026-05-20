@@ -5,7 +5,9 @@ const title = document.querySelector("h1");
 const header = document.querySelector("header");
 const pageTitle = document.querySelector("title");
 const toggleBox = document.querySelector("#toggle-buttons");
-const toggleButtons = toggleBox.querySelectorAll("button")
+const toggleButtons = toggleBox.querySelectorAll("button");
+const menuButton = document.querySelector("#menu-button");
+const menuIcon = menuButton.querySelector("svg");
 
 function renderContent(data) {
   if (!main) {
@@ -139,7 +141,6 @@ function renderContent(data) {
   }
 
   function renderContentBlock(content) {
-    console.log(content.type);
     switch (content.type) {
       case "photo":
         return renderPhoto(content);
@@ -176,7 +177,6 @@ function renderContent(data) {
 
           // 🔥 NOVO: renderiza conteúdo real
           if (child.content) {
-            console.log(child);
             const contentEl = renderContentBlock(child.content);
 
             if (contentEl) {
@@ -213,14 +213,15 @@ function areElemsOverlap(el1, el2) {
 }
 
 function navColor() {
-  console.log(areElemsOverlap(nav, main));
   if (areElemsOverlap(nav, main)) {
     navLinks.forEach((link) => {
       link.style.cssText = "color: black;   text-shadow: 4px 4px 11px #fff";
+      menuIcon.setAttribute("fill", "#000");
     });
   } else {
     navLinks.forEach((link) => {
       link.style.cssText = "color: white;   text-shadow: 4px 4px 11px #000";
+      menuIcon.setAttribute("fill", "#fff");
     });
   }
 }

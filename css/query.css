@@ -5,6 +5,23 @@
   nav {
     width: 100%;
   }
+  nav a {
+    display: none;
+  }
+  #menu-button {
+    display: flex;
+    height: 100%;
+    border: none;
+    background: transparent;
+    aspect-ratio: 1/1;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-button svg {
+    width: 40px;
+    height: 40px;
+    transition: 250ms;
+  }
   h2 {
     width: 90%;
     margin-left: auto;
