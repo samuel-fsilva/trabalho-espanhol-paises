@@ -1,0 +1,37 @@
+.content-block {
+  padding: 40px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  gap: 30px;
+}
+.content-block h2 {
+  grid-column: span 2;
+}
+.container-right-card {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.container-left-card {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+.container-left-card p {
+  grid-column: 2;
+}
+.content-block .lateral-card {
+  display: flex;
+  background: rgb(240, 240, 240);
+  box-shadow:
+    rgba(0, 0, 0, 0.225) 0px 19px 38px,
+    rgba(0, 0, 0, 0.165) 0px 15px 12px;
+  border-radius: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.lateral-left {
+  grid-column: 1;
+  grid-row: 2;
+}
+.lateral-card table {
+  border: 1px solid black;
+}

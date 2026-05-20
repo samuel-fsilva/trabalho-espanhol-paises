@@ -1,0 +1,94 @@
+:root {
+  --nav-height: 10vh;
+}
+body {
+  margin: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background: url(../images/machu.png);
+  background-size: cover;
+  font-family: "Outfit", sans-serif;
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+.to-centralize {
+  justify-content: center;
+  align-items: center;
+}
+.text-white {
+  color: white;
+  text-shadow: 4px 4px 11px #000000;
+  text-align: center;
+}
+nav {
+  height: var(--nav-height);
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+}
+nav #items {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  align-items: center;
+  height: 100%;
+}
+#items a {
+  text-decoration: none;
+  text-align: center;
+  align-self: center;
+  color: white;
+  text-shadow: 4px 4px 11px #000000;
+  text-align: center;
+}
+#toggle-buttons{
+  justify-self: flex-end;
+  align-self: center;
+  position: relative;
+  right: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 120px;
+  height: 75%;
+  gap: 20px;
+}
+#toggle-buttons button{
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  border: none ;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+#toggle-peru{
+  background:  url(../images/peru/bandeira.png);
+}
+#toggle-bolivia{
+  background:  url(../images/bolivia/bandeira.png);
+}
+header {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  height: 100vh;
+  width: 100%;
+}
+h1 {
+  font-size: 110px;
+  align-self: flex-end;
+  margin: 0;
+}
+h2 {
+  align-self: flex-start;
+}
+main {
+  background: white;
+  min-height: 100vh;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+p {
+  text-indent: 60px;
+}
