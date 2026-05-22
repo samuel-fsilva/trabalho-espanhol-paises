@@ -2,13 +2,13 @@ let siteContent = [
   {
     title: "Peru",
     subtitle:
-      "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...",
+      "El Perú es un país lleno de historia, cultura y maravillas naturales.",
     background: "images/peru/background.png",
     mainContent: [
       {
-        title: "Test",
+        title: "Nacionalidad Peruana",
         textContent:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fermentum ex ligula, vel feugiat odio lacinia eu. Phasellus accumsan aliquet accumsan. Maecenas blandit nisl massa, nec porta est gravida sit amet. Nulla neque tellus, hendrerit vitae fringilla vel, commodo ut quam. Nullam eget porta turpis. Phasellus sit amet justo purus. Pellentesque id tempus sapien, eget porta lorem. Duis libero ex, tristique quis molestie vel, sodales euismod magna. Curabitur vestibulum scelerisque tellus et aliquet. Mauris eleifend vehicula tristique. Maecenas quis eleifend nisl.",
+          "Perú se encuentra en la costa occidental de América del Sur. Limita con Ecuador, Colombia, Brasil, Bolivia y Chile. La bandera peruana consta de tres franjas verticales de igual ancho: las exteriores son rojas y la central es blanca. El rojo simboliza la sangre derramada por héroes y patriotas, mientras que el blanco representa la pureza de sentimiento, la libertad y la paz. La Moneda oficial es el Sol (PEN): Se divide en 100 céntimos. Es conocida por ser una de las monedas más estables de la región latinoamericana.",
         children: [
           {
             type: "lateral-card",
@@ -22,9 +22,9 @@ let siteContent = [
         ],
       },
       {
-        title: "Test2",
+        title: "atracciones turísticas y comida",
         textContent:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur fermentum ex ligula, vel feugiat odio lacinia eu. Phasellus accumsan aliquet accumsan. Maecenas blandit nisl massa, nec porta est gravida sit amet. Nulla neque tellus, hendrerit vitae fringilla vel, commodo ut quam. Nullam eget porta turpis. Phasellus sit amet justo purus. Pellentesque id tempus sapien, eget porta lorem. Duis libero ex, tristique quis molestie vel, sodales euismod magna. Curabitur vestibulum scelerisque tellus et aliquet. Mauris eleifend vehicula tristique. Maecenas quis eleifend nisl.",
+          "Los principales atractivos turisticos es: Machu Picchu (Cusco): La ciudadela inca considerada una de las Siete Maravillas del Mundo Moderno. Líneas de Nazca (Ica): Gigantescos geoglifos en el desierto que representan figuras de animales y plantas, visibles solo desde el aire. Lago Titicaca (Puno): El lago navegable más alto del mundo, hogar de las islas flotantes de los Uros. Valle del Colca (Arequipa): Uno de los cañones más profundos del mundo, ideal para el avistamiento del cóndor andino. Las principales Comidas es: Ceviche: Pescado fresco marinado en jugo de limón, ají limo, cebolla y sal. Es el plato bandera. Lomo Saltado: Un salteado de carne de res, cebolla y tomate en wok, que fusiona la técnica china con ingredientes peruanos. Ají de Gallina: Crema espesa a base de ají amarillo, pan y leche, servida con gallina deshilachada. Cuy Chactado: Conejillo de indias frito a la piedra, típico de la región andina.",
         children: [
           {
             type: "lateral-card",
@@ -89,10 +89,9 @@ window.addEventListener("scroll", (event) => {
   navColor();
 });
 
-
 toggleButtons.forEach((button) => {
   button.addEventListener("click", (e) => {
-    main.innerHTML = ""
+    main.innerHTML = "";
     setElements(siteContent, e.target.value);
   });
 });
