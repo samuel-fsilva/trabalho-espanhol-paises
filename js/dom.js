@@ -215,12 +215,14 @@ function areElemsOverlap(el1, el2) {
 function navColor() {
   if (areElemsOverlap(nav, main)) {
     navLinks.forEach((link) => {
-      link.style.cssText = "color: black;   text-shadow: 4px 4px 11px #fff";
+      link.style.cssText = "color: black;   text-shadow: 4px 4px 11px #fff;";
+      nav.style.cssText = " background: white; border-bottom: 1px solid #c7c7c7ff;";
       menuIcon.setAttribute("fill", "#000");
     });
   } else {
     navLinks.forEach((link) => {
       link.style.cssText = "color: white;   text-shadow: 4px 4px 11px #000";
+      nav.style.cssText = " background: transparent; padding: 0;";
       menuIcon.setAttribute("fill", "#fff");
     });
   }
@@ -229,7 +231,7 @@ function navColor() {
 function setElements(cont, index) {
   pageTitle.innerText = cont[index].title;
   title.innerText = cont[index].title;
-  document.body.style.cssText = `background: url(${cont[index].background}); background-size: cover;  background-attachment: fixed;`;
+  document.body.style.cssText = `background: url(${cont[index].background}); background-size: cover;  background-attachment: fixed; `;
   cont[index].mainContent.forEach((element) => {
     renderContent(element);
   });

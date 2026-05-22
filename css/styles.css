@@ -28,6 +28,8 @@ nav {
   z-index: 1;
   display: grid;
   grid-template-columns: 6fr 4fr;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+
 }
 nav #items {
   display: grid;
@@ -61,6 +63,9 @@ nav #items {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  height: 80%;
+  align-self: center;
+  justify-self: center;
 }
 #toggle-peru {
   background: url(../images/peru/bandeira.png);
