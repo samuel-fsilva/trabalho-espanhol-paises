@@ -8,6 +8,7 @@ const toggleBox = document.querySelector("#toggle-buttons");
 const toggleButtons = toggleBox.querySelectorAll("button");
 const menuButton = document.querySelector("#menu-button");
 const menuIcon = menuButton.querySelector("svg");
+const subtitle = header.querySelector("h2")
 
 function renderContent(data) {
   if (!main) {
@@ -28,7 +29,7 @@ function renderContent(data) {
   // Texto
   if (data.textContent) {
     const text = document.createElement("p");
-    text.textContent = data.textContent;
+    text.innerHTML = data.textContent;
     container.appendChild(text);
   }
 
@@ -42,7 +43,7 @@ function renderContent(data) {
     const figure = document.createElement("figure");
 
     const img = document.createElement("img");
-    img.style.cssText = "width: 100%; border-radius: 5px";
+    img.style.cssText = "width: 225px; border-radius: 5px";
     img.src = content.url;
 
     figure.appendChild(img);
@@ -111,9 +112,11 @@ function renderContent(data) {
   function renderPhotosList(content) {
     if (Array.isArray(content.urls)) {
       const figure = document.createElement("figure");
+      figure.style.cssText = "display: grid; grid-template-rows: auto auto"
 
       const img = document.createElement("img");
-      img.style.cssText = "width: 100%; border-radius: 5px";
+      img.style.cssText =
+        "height: 150px; border-radius: 5px; justify-self: center; margin-left: auto; margin-right: auto";
       img.src = content.urls[0];
 
       figure.appendChild(img);
@@ -216,7 +219,8 @@ function navColor() {
   if (areElemsOverlap(nav, main)) {
     navLinks.forEach((link) => {
       link.style.cssText = "color: black;   text-shadow: 4px 4px 11px #fff;";
-      nav.style.cssText = " background: white; border-bottom: 1px solid #c7c7c7ff;";
+      nav.style.cssText =
+        " background: white; border-bottom: 1px solid #c7c7c7ff;";
       menuIcon.setAttribute("fill", "#000");
     });
   } else {
@@ -232,6 +236,7 @@ function setElements(cont, index) {
   pageTitle.innerText = cont[index].title;
   title.innerText = cont[index].title;
   document.body.style.cssText = `background: url(${cont[index].background}); background-size: cover;  background-attachment: fixed; `;
+  subtitle.innerText = cont[index].subtitle
   cont[index].mainContent.forEach((element) => {
     renderContent(element);
   });

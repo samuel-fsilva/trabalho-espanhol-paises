@@ -8,6 +8,9 @@
   nav a {
     display: none;
   }
+  p {
+    text-indent: 30px;
+  }
   #menu-button {
     display: flex;
     height: 100%;
@@ -31,13 +34,14 @@
   .container-left-card,
   .container-right-card {
     display: grid;
-    grid-template-rows: auto 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
     grid-template-columns: none;
     gap: 0;
   }
   .lateral-card {
     grid-row: 3;
     grid-column: span 2;
+    margin-top: 20px;
   }
   .container-left-card p,
   .container-right-card p {
