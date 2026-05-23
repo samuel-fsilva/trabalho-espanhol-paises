@@ -113,3 +113,9 @@ button:hover {
 #menu-button {
   display: none;
 }
+ul, ol{
+  list-style-position: inside;
+}
+ul li, ol li{
+  text-indent: 20px;
+}

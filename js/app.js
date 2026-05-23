@@ -8,7 +8,7 @@ let siteContent = [
       {
         title: "Nacionalidad Peruana",
         textContent:
-          "Perú se encuentra en la costa occidental de América del Sur. Limita con Ecuador, Colombia, Brasil, Bolivia y Chile. La bandera peruana consta de tres franjas verticales de igual ancho: las exteriores son rojas y la central es blanca. El rojo simboliza la sangre derramada por héroes y patriotas, mientras que el blanco representa la pureza de sentimiento, la libertad y la paz. La Moneda oficial es el Sol (PEN): Se divide en 100 céntimos. Es conocida por ser una de las monedas más estables de la región latinoamericana.",
+          "Perú se encuentra en la costa occidental de América del Sur. Limita con Ecuador, Colombia, Brasil, Bolivia y Chile. <br>La bandera peruana consta de tres franjas verticales de igual ancho: las exteriores son rojas y la central es blanca. El rojo simboliza la sangre derramada por héroes y patriotas, mientras que el blanco representa la pureza de sentimiento, la libertad y la paz. <br>La Moneda oficial es el Sol (PEN): Se divide en 100 céntimos. Es conocida por ser una de las monedas más estables de la región latinoamericana.",
         children: [
           {
             type: "lateral-card",
