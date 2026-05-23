@@ -2,7 +2,6 @@ const main = document.querySelector("main");
 const nav = document.querySelector("nav");
 const navLinks = nav.querySelectorAll("a");
 const title = document.querySelector("h1");
-const subtitle = document.querySelector("header h2");
 const header = document.querySelector("header");
 const pageTitle = document.querySelector("title");
 const toggleBox = document.querySelector("#toggle-buttons");
