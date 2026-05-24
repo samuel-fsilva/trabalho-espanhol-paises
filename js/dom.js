@@ -233,7 +233,7 @@ function areElemsOverlap(el1, el2) {
 }
 
 function navColor() {
-  if (areElemsOverlap(nav, main)) {
+  if (areElemsOverlap(nav, main) || areElemsOverlap(nav, footer)) {
     navLinks.forEach((link) => {
       link.style.cssText = "color: black;   text-shadow: 4px 4px 11px #fff;";
       nav.style.cssText =
