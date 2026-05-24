@@ -8,7 +8,10 @@ const toggleBox = document.querySelector("#toggle-buttons");
 const toggleButtons = toggleBox.querySelectorAll("button");
 const menuButton = document.querySelector("#menu-button");
 const menuIcon = menuButton.querySelector("svg");
-const subtitle = header.querySelector("h2")
+const subtitle = header.querySelector("h2");
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("overlay");
+const sidebarLinks = sidebar.querySelectorAll("a");
 
 function renderContent(data) {
   if (!main) {
@@ -24,6 +27,9 @@ function renderContent(data) {
     const title = document.createElement("h2");
     title.textContent = data.title;
     container.appendChild(title);
+    if (data.id) {
+      title.id = data.id;
+    }
   }
 
   // Texto
@@ -31,6 +37,17 @@ function renderContent(data) {
     const text = document.createElement("p");
     text.innerHTML = data.textContent;
     container.appendChild(text);
+  }
+  console.log(data);
+  if (data.customStyle) {
+    if (data.customStyle.title) {
+      const title = container.querySelector("h2");
+      title.style.cssText = data.customStyle.title;
+    }
+
+    if (data.customStyle.section) {
+      container.style.cssText = data.customStyle.section;
+    }
   }
 
   // 🔧 Funções auxiliares de conteúdo
@@ -112,7 +129,7 @@ function renderContent(data) {
   function renderPhotosList(content) {
     if (Array.isArray(content.urls)) {
       const figure = document.createElement("figure");
-      figure.style.cssText = "display: grid; grid-template-rows: auto auto"
+      figure.style.cssText = "display: grid; grid-template-rows: auto auto";
 
       const img = document.createElement("img");
       img.style.cssText =
@@ -238,8 +255,34 @@ function setElements(cont, index) {
   pageTitle.innerText = cont[index].title;
   title.innerText = cont[index].title;
   document.body.style.cssText = `background: url(${cont[index].background}); background-size: cover;  background-attachment: fixed; `;
-  subtitle.innerText = cont[index].subtitle
+  subtitle.innerText = cont[index].subtitle;
   cont[index].mainContent.forEach((element) => {
     renderContent(element);
   });
 }
+
+function createLinkBoxes(l) {
+  console.log(l.id);
+  if (l.id == "item03") {
+  }
+}
+function lateralMenu(str) {
+  switch (str) {
+    case "show":
+      sidebar.classList.add("active");
+      overlay.classList.add("active");
+      break;
+    case "hide":
+      sidebar.classList.remove("active");
+      overlay.classList.remove("active");
+      break;
+    default:
+      break;
+  }
+}
+
+sidebarLinks.forEach((link) => {
+  link.addEventListener("click", () => {
+    lateralMenu("hide");
+  });
+});

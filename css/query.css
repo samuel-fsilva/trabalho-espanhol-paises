@@ -3,7 +3,7 @@
     width: 100dvw;
   }
   nav {
-    width: 100%;
+    width: 100vw;
   }
   nav a {
     display: none;
@@ -60,8 +60,13 @@
   }
 }
 @media (max-width: 1000px) {
-  main {
+  main,
+  footer {
     width: 100vw;
     border-radius: 0px;
+  }
+  footer{
+    padding: 5vw;
+    word-break: break-all;
   }
 }
