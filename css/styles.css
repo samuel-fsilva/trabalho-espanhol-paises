@@ -112,7 +112,7 @@ main h2 {
 }
 p {
   text-indent: 60px;
-  text-align: justify;
+  text-align: left;
   align-self: center;
   justify-self: center;
   font-size: 1.2em;
@@ -134,5 +134,5 @@ ol {
 }
 ul li,
 ol li {
-  text-indent: 20px;
+  margin-bottom: 1rem;
 }
