@@ -12,6 +12,7 @@ const subtitle = header.querySelector("h2");
 const sidebar = document.getElementById("sidebar");
 const overlay = document.getElementById("overlay");
 const sidebarLinks = sidebar.querySelectorAll("a");
+const footer = document.querySelector("footer")
 
 function renderContent(data) {
   if (!main) {
